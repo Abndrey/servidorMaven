@@ -11,14 +11,23 @@ public class Conexao {
     private String user = "root";
     private String password = "";
 
+    private Connection conexao;
+
+
     //Metodo para criar a conexão com o banco de dados
-    public void getConexao(){
+    public Connection getConexao(){
+        
         try {
-            Connection conexao = DriverManager.getConnection(url, user, password);
-        } catch (SQLException e) {
+            //Try: tente fazer isso "a conexão"
+         conexao = DriverManager.getConnection(url, user, password);
+            System.out.println("CONEXÃO BEM SUCEDIDA");
+            return conexao;
+        } catch (SQLException e) { //se não conseguiu
             // TODO Auto-generated catch block
             e.printStackTrace();
+            System.out.println("ERRO NA CONEXÃO");
         }
+        return null;
     }
 
 }
