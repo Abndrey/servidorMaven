@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class Conexao {
 
     //Atrinutos do protocolo de conexão com o banco de dados
-    private String url = "jdbc:mysql://localhost33306/nome_da_base_de_dados";
+    private String url = "jdbc:mysql://localhost:3306/pet";
     private String user = "root";
     private String password = "";
 
